@@ -177,22 +177,42 @@ export default {
   border-top: 10px solid rgba(255, 122, 0, 0.8);
   border-left: 10px solid transparent;
 }
-.main{
+.main {
   height: 80vh;
   min-height: 80vh;
   max-height: 80vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
-.header{
+.header {
   background-color: var(--yellow);
 }
-.brand{
+.brand {
   font-size: 1rem;
-  color: white;;
+  color: white;
 }
-.footer{
-  border-top: 1px solid var(--light)
+.footer {
+  border-top: 1px solid var(--light);
 }
-.submit{
+.submit {
   margin-left: auto;
 }
+/*スクロールバー全体*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/*スクロールバーの軌道*/
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+}
+
+/*スクロールバーの動く部分*/
+::-webkit-scrollbar-thumb {
+  background-color: rgba(223, 182, 0, 0.5);
+  border-radius: 10px;
+  box-shadow:0 0 0 1px rgba(255, 255, 255, .3);
+}
+
 </style>
