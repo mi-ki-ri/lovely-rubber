@@ -195,7 +195,7 @@ export default {
   color: white;
 }
 .footer {
-  border-top: 1px solid var(--light);
+  border-top: 1px solid var(--gray);
   padding-top: 5px;
 }
 .submit {
