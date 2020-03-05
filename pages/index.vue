@@ -22,7 +22,7 @@
     </b-container>
     <b-container tag="footer" class="footer">
       <b-row>
-        <b-col>
+        <b-col cols="10">
           <b-textarea v-model="msg" /> </b-col
         ><b-col>
           <b-button variant="info" class="submit" @click="test">送信</b-button>
@@ -200,6 +200,8 @@ export default {
 }
 .submit {
   margin-left: auto;
+  width: 100%;
+  height: 100%;
 }
 
 .tori {
