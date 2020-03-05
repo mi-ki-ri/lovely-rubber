@@ -193,6 +193,7 @@ export default {
 }
 .footer {
   border-top: 1px solid var(--light);
+  padding-top: 5px;
 }
 .submit {
   margin-left: auto;
