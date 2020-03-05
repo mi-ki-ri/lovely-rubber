@@ -20,10 +20,13 @@
         </b-col>
       </b-row>
     </b-container>
-    <b-container tag="footer" class="footer" >
+    <b-container tag="footer" class="footer">
       <b-row>
-        <b-textarea v-model="msg" />
-        <b-button variant="info" class="submit" @click="test">送信</b-button>
+        <b-col>
+          <b-textarea v-model="msg" /> </b-col
+        ><b-col>
+          <b-button variant="info" class="submit" @click="test">送信</b-button>
+        </b-col>
       </b-row>
     </b-container>
   </b-container>
@@ -199,26 +202,25 @@ export default {
   margin-left: auto;
 }
 
-.tori{
+.tori {
   border-radius: 10%;
 }
 
 /*スクロールバー全体*/
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 
 /*スクロールバーの軌道*/
 ::-webkit-scrollbar-track {
   border-radius: 10px;
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, .0);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
 }
 
 /*スクロールバーの動く部分*/
 ::-webkit-scrollbar-thumb {
   background-color: rgba(223, 182, 0, 0.5);
   border-radius: 10px;
-  box-shadow:0 0 0 1px rgba(255, 255, 255, .3);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3);
 }
-
 </style>
