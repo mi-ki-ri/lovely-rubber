@@ -28,7 +28,7 @@ export default {
       msg: "",
       responses: [],
       api: "https://us-central1-rubber-app.cloudfunctions.net/rubber",
-      gobis: ["","", "？", "！", "だね。", "なんだね。", "なんだ。", "だって。"],
+      gobis: ["","", "？", "！", "だね。", "なんだね。", "なんだ。", "だって。","なの？","って？"],
       aizutis: ["はい。", "うん。", "へえ。", "そうなんだ。", "そう。"]
     };
   },
