@@ -1,12 +1,12 @@
 <template>
-  <b-container fluid>
+  <b-container fluid class="p-0">
     <b-container fluid tag="header" class="header m-0 p-0">
       <b-row class="m-0 p-0">
         <b-col class="m-0 p-1">
           <h1 class="brand">Lovely Rubber</h1>
         </b-col>
-        <b-col>
-          <span class="bg-white">🐥</span>
+        <b-col class="text-right">
+          <span class=" bg-white">🐥</span>
         </b-col>
       </b-row>
     </b-container>
