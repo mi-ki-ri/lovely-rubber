@@ -48,6 +48,10 @@ export default {
     'bootstrap-vue/nuxt',
     '@nuxtjs/dotenv'
   ],
+  generate: {dir:"docs"},
+  router: {
+    base: '/lovely-rubber/'
+  },
   /*
   ** Build configuration
   */

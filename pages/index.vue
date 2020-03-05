@@ -28,7 +28,7 @@ export default {
       msg: "",
       responses: [],
       api: "https://us-central1-rubber-app.cloudfunctions.net/rubber",
-      gobis: ["。", "？", "！", "だね。", "なんだね。", "なんだ。", "だって。"],
+      gobis: ["","", "？", "！", "だね。", "なんだね。", "なんだ。", "だって。"],
       aizutis: ["はい。", "うん。", "へえ。", "そうなんだ。", "そう。"]
     };
   },
@@ -40,7 +40,7 @@ export default {
     },
     test() {
       let gobi = this.gobis[Math.floor(Math.random() * this.gobis.length)];
-
+      let gotou = this.aizutis[Math.floor(Math.random() * this.aizutis.length)];
       axios
         .post(
           "https://api.ce-cotoha.com/v1/oauth/accesstokens",
@@ -59,13 +59,13 @@ export default {
           console.log(res);
 
           let accessToken = res.data.access_token;
-          let apiURL = "https://api.ce-cotoha.com/api/dev/nlp/v1/ne";
+          let apiURL = "https://api.ce-cotoha.com/api/dev/nlp/v1/keyword";
           let original = this.msg;
           axios
             .post(
               apiURL,
               {
-                sentence: original,
+                document: original,
                 type: "kuzure"
               },
               {
@@ -76,12 +76,15 @@ export default {
               }
             )
             .then(words => {
+              console.log(words);
               var result = "";
               if (words.data.result.length > 0) {
                 result =
+                  gotou +
                   words.data.result[
                     Math.floor(Math.random() * words.data.result.length)
-                  ].std_form + gobi;
+                  ].form +
+                  gobi;
                 this.responses.push({
                   msg: this.msg,
                   response: result
