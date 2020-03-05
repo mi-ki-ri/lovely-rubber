@@ -28,9 +28,8 @@ export default {
       msg: "",
       responses: [],
       api: "https://us-central1-rubber-app.cloudfunctions.net/rubber",
-      gobis: [
-        "だね", "なんだね", "なんだよ", "だって"
-      ]
+      gobis: ["。", "？", "！", "だね。", "なんだね。", "なんだ。", "だって。"],
+      aizutis: ["はい。", "うん。", "へえ。", "そうなんだ。", "そう。"]
     };
   },
   methods: {
@@ -40,8 +39,7 @@ export default {
       });
     },
     test() {
-
-      let gobi = this.gobis[Math.floor(Math.random()*this.gobis.length)]
+      let gobi = this.gobis[Math.floor(Math.random() * this.gobis.length)];
 
       axios
         .post(
@@ -61,14 +59,14 @@ export default {
           console.log(res);
 
           let accessToken = res.data.access_token;
-          let apiURL = "https://api.ce-cotoha.com/api/dev/nlp/beta/summary";
+          let apiURL = "https://api.ce-cotoha.com/api/dev/nlp/v1/ne";
           let original = this.msg;
           axios
             .post(
               apiURL,
               {
-                document: original,
-                sent_len: 1
+                sentence: original,
+                type: "kuzure"
               },
               {
                 headers: {
@@ -77,12 +75,28 @@ export default {
                 }
               }
             )
-            .then(summary => {
-              console.log(summary.data.result + "だね");
-              this.responses.push({
-                msg: this.msg,
-                response: summary.data.result + gobi
-              });
+            .then(words => {
+              var result = "";
+              if (words.data.result.length > 0) {
+                result =
+                  words.data.result[
+                    Math.floor(Math.random() * words.data.result.length)
+                  ].std_form + gobi;
+                this.responses.push({
+                  msg: this.msg,
+                  response: result
+                });
+              } else {
+                result = this.aizutis[
+                  Math.floor(Math.random() * this.aizutis.length)
+                ];
+                this.responses.push({
+                  msg: this.msg,
+                  response: result
+                });
+              }
+
+              console.log(result);
             })
             .catch(err => {
               return err;
@@ -94,15 +108,14 @@ export default {
 </script>
 
 <style>
-.msg{
-  border: 2px solid rgba(0,0,255,0.8);
-  background-color: rgba(0,0,255,0.1);;
+.msg {
+  border: 2px solid rgba(0, 0, 255, 0.8);
+  background-color: rgba(0, 0, 255, 0.1);
   border-radius: 5px;
-
 }
-.response{
-  border: 2px solid rgba(255,122,0,0.8);
-  background-color: rgba(255,122,0,0.1);
+.response {
+  border: 2px solid rgba(255, 122, 0, 0.8);
+  background-color: rgba(255, 122, 0, 0.1);
   border-radius: 5px;
 }
 </style>
