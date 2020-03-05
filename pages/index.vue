@@ -1,6 +1,13 @@
 <template>
   <b-container fluid>
-    <b-container>
+    <b-container fluid tag="header" class="header m-0 p-0">
+      <b-row>
+        <b-col>
+          <h1 class="brand">Lovely Rubber</h1>
+        </b-col>
+      </b-row>
+    </b-container>
+    <b-container tag="main" class="main">
       <b-row :key="index" v-for="(response, index) of responses">
         <b-col class="msg m-2 mb-4">
           {{ response.msg }}
@@ -10,7 +17,7 @@
         </b-col>
       </b-row>
     </b-container>
-    <b-container tag="footer">
+    <b-container tag="footer" class="footer" fluid>
       <b-row>
         <b-textarea v-model="msg" />
         <b-button @click="test">送信</b-button>
@@ -166,5 +173,20 @@ export default {
   border-right: 10px solid transparent;
   border-top: 10px solid rgba(255, 122, 0, 0.8);
   border-left: 10px solid transparent;
+}
+.main{
+  height: 80vh;
+  min-height: 80vh;
+  max-height: 80vh;
+}
+.header{
+  background-color: var(--yellow);
+}
+.brand{
+  font-size: 1rem;
+  color: white;;
+}
+.footer{
+  border-top: 1px solid var(--light)
 }
 </style>
