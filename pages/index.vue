@@ -20,10 +20,10 @@
         </b-col>
       </b-row>
     </b-container>
-    <b-container tag="footer" class="footer" fluid>
+    <b-container tag="footer" class="footer" >
       <b-row>
         <b-textarea v-model="msg" />
-        <b-button variant="yellow" class="submit" @click="test">送信</b-button>
+        <b-button variant="info" class="submit" @click="test">送信</b-button>
       </b-row>
     </b-container>
   </b-container>
@@ -210,7 +210,7 @@ export default {
 /*スクロールバーの軌道*/
 ::-webkit-scrollbar-track {
   border-radius: 10px;
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, .0);
 }
 
 /*スクロールバーの動く部分*/
