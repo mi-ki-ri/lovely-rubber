@@ -142,13 +142,13 @@ export default {
   content: "";
   position: absolute;
   left: 20px;
-  bottom: -5px;
+  bottom: -10px;
   display: block;
   width: 0;
   height: 0;
-  border-right: 5px solid transparent;
-  border-top: 5px solid rgba(0, 0, 255, 0.8);
-  border-left: 5px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid rgba(0, 0, 255, 0.8);
+  border-left: 10px solid transparent;
 }
 .response {
   border: 2px solid rgba(255, 122, 0, 0.8);
@@ -159,12 +159,12 @@ export default {
   content: "";
   position: absolute;
   right: 20px;
-  bottom: -5px;
+  bottom: -10px;
   display: block;
   width: 0;
   height: 0;
-  border-right: 5px solid transparent;
-  border-top: 5px solid rgba(255, 122, 0, 0.8)d;
-  border-left: 5px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid rgba(255, 122, 0, 0.8);
+  border-left: 10px solid transparent;
 }
 </style>
