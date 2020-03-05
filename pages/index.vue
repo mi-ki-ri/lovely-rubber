@@ -97,9 +97,11 @@ export default {
                   msg: this.msg,
                   response: result
                 });
+
               }
 
               console.log(result);
+              this.msg = ""
             })
             .catch(err => {
               return err;
