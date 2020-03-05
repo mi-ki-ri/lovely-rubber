@@ -52,6 +52,17 @@ export default {
     test() {
       let gobi = this.gobis[Math.floor(Math.random() * this.gobis.length)];
       let gotou = this.aizutis[Math.floor(Math.random() * this.aizutis.length)];
+      let msg = this.msg.length > 0 ? this.msg : "";
+
+      if (msg == "") {
+        this.responses.push({
+          msg: "…",
+          response: "えっ、何？　よく聞こえなかった。"
+        });
+      }
+
+      this.msg = "";
+
       axios
         .post(
           "https://api.ce-cotoha.com/v1/oauth/accesstokens",
@@ -71,7 +82,7 @@ export default {
 
           let accessToken = res.data.access_token;
           let apiURL = "https://api.ce-cotoha.com/api/dev/nlp/v1/keyword";
-          let original = this.msg;
+          let original = msg;
           axios
             .post(
               apiURL,
@@ -97,19 +108,17 @@ export default {
                   ].form +
                   gobi;
                 this.responses.push({
-                  msg: this.msg,
+                  msg: original,
                   response: result
                 });
-                this.msg = "";
               } else {
                 result = this.aizutis[
                   Math.floor(Math.random() * this.aizutis.length)
                 ];
                 this.responses.push({
-                  msg: this.msg,
+                  msg: original,
                   response: result
                 });
-                this.msg = "";
               }
 
               console.log(result);
