@@ -6,7 +6,7 @@
           <h1 class="brand">Lovely Rubber</h1>
         </b-col>
         <b-col class="text-right">
-          <span class="bg-white m-0 p-1">🐥</span>
+          <span class="tori bg-white m-0 p-1">🐥</span>
         </b-col>
       </b-row>
     </b-container>
@@ -197,6 +197,11 @@ export default {
 .submit {
   margin-left: auto;
 }
+
+.tori{
+  border-radius: 10%;
+}
+
 /*スクロールバー全体*/
 ::-webkit-scrollbar {
     width: 10px;
