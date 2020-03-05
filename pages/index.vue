@@ -2,10 +2,10 @@
   <b-container fluid>
     <b-container>
       <b-row :key="index" v-for="(response, index) of responses">
-        <b-col class="msg m-2">
+        <b-col class="msg m-2 mb-4">
           {{ response.msg }}
         </b-col>
-        <b-col class="response m-2">
+        <b-col class="response m-2 mb-4">
           {{ response.response }}
         </b-col>
       </b-row>
@@ -138,9 +138,33 @@ export default {
   background-color: rgba(0, 0, 255, 0.1);
   border-radius: 5px;
 }
+.msg::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  bottom: -5px;
+  display: block;
+  width: 0;
+  height: 0;
+  border-right: 5px solid transparent;
+  border-top: 5px solid rgba(0, 0, 255, 0.8);
+  border-left: 5px solid transparent;
+}
 .response {
   border: 2px solid rgba(255, 122, 0, 0.8);
   background-color: rgba(255, 122, 0, 0.1);
   border-radius: 5px;
+}
+.response::before {
+  content: "";
+  position: absolute;
+  right: 20px;
+  bottom: -5px;
+  display: block;
+  width: 0;
+  height: 0;
+  border-right: 5px solid transparent;
+  border-top: 5px solid rgba(255, 122, 0, 0.8)d;
+  border-left: 5px solid transparent;
 }
 </style>
