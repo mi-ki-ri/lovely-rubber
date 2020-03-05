@@ -1,9 +1,12 @@
 <template>
   <b-container fluid>
     <b-container fluid tag="header" class="header m-0 p-0">
-      <b-row>
-        <b-col>
+      <b-row class="m-0 p-0">
+        <b-col class="m-0 p-1">
           <h1 class="brand">Lovely Rubber</h1>
+        </b-col>
+        <b-col>
+          <span class="bg-white">🐥</span>
         </b-col>
       </b-row>
     </b-container>
@@ -20,7 +23,7 @@
     <b-container tag="footer" class="footer" fluid>
       <b-row>
         <b-textarea v-model="msg" />
-        <b-button @click="test">送信</b-button>
+        <b-button variant="yellow" class="submit" @click="test">送信</b-button>
       </b-row>
     </b-container>
   </b-container>
@@ -188,5 +191,8 @@ export default {
 }
 .footer{
   border-top: 1px solid var(--light)
+}
+.submit{
+  margin-left: auto;
 }
 </style>
