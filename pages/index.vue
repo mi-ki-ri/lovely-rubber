@@ -28,7 +28,18 @@ export default {
       msg: "",
       responses: [],
       api: "https://us-central1-rubber-app.cloudfunctions.net/rubber",
-      gobis: ["","", "？", "！", "だね。", "なんだね。", "なんだ。", "だって。","なの？","って？"],
+      gobis: [
+        "",
+        "",
+        "？",
+        "！",
+        "だね。",
+        "なんだね。",
+        "なんだ。",
+        "だって。",
+        "なの？",
+        "って？"
+      ],
       aizutis: ["はい。", "うん。", "へえ。", "そうなんだ。", "そう。"]
     };
   },
@@ -89,6 +100,7 @@ export default {
                   msg: this.msg,
                   response: result
                 });
+                this.msg = "";
               } else {
                 result = this.aizutis[
                   Math.floor(Math.random() * this.aizutis.length)
@@ -97,11 +109,10 @@ export default {
                   msg: this.msg,
                   response: result
                 });
-
+                this.msg = "";
               }
 
               console.log(result);
-              this.msg = ""
             })
             .catch(err => {
               return err;
