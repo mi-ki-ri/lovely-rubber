@@ -154,13 +154,13 @@ export default {
 .msg::before {
   content: "";
   position: absolute;
-  bottom: 20px;
+  bottom: 5px;
   left: -10px;
   display: block;
   width: 0;
   height: 0;
   border-bottom: 10px solid transparent;
-  border-left: 10px solid rgba(0, 0, 255, 0.8);
+  border-right: 10px solid rgba(0, 0, 255, 0.8);
   border-top: 10px solid transparent;
 }
 .response {
@@ -171,13 +171,13 @@ export default {
 .response::before {
   content: "";
   position: absolute;
-  bottom: 20px;
+  bottom: 5px;
   right: -10px;
   display: block;
   width: 0;
   height: 0;
   border-top: 10px solid transparent;
-  border-right: 10px solid rgba(255, 122, 0, 0.8);
+  border-left: 10px solid rgba(255, 122, 0, 0.8);
   border-bottom: 10px solid transparent;
 }
 .main {
