@@ -13,14 +13,13 @@
 
     <b-container tag="footer" class="footer">
       <b-row>
-        <b-col cols="10">
-          <b-textarea v-model="msg" /> </b-col
+        <b-col cols="10"> <b-textarea v-model="msg" class="textarea" /> </b-col
         ><b-col>
           <b-button variant="info" class="submit" @click="test">送信</b-button>
         </b-col>
       </b-row>
     </b-container>
-        <b-container tag="main" class="main">
+    <b-container tag="main" class="main">
       <b-row :key="index" v-for="(response, index) of responses">
         <b-col class="msg m-2 mb-4">
           {{ response.msg }}
@@ -198,6 +197,9 @@ export default {
 .footer {
   border-bottom: 1px solid var(--gray);
   padding-bottom: 5px;
+}
+.textarea {
+  width: 100%;
 }
 .submit {
   margin-left: auto;
