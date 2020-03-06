@@ -154,7 +154,7 @@ export default {
 .msg::before {
   content: "";
   position: absolute;
-  bottom: 5px;
+  bottom: 2px;
   left: -10px;
   display: block;
   width: 0;
@@ -171,7 +171,7 @@ export default {
 .response::before {
   content: "";
   position: absolute;
-  bottom: 5px;
+  bottom: 2px;
   right: -10px;
   display: block;
   width: 0;
