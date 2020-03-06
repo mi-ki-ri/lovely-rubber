@@ -3,7 +3,7 @@
     <b-container fluid tag="header" class="header m-0 p-0">
       <b-row class="m-0 p-0 d-flex align-items-center">
         <b-col class="m-0 p-1">
-          <h1 class="brand">Lovely Rubber</h1>
+          <h1 class="brand d-flex align-items-center">Lovely Rubber</h1>
         </b-col>
         <b-col class="text-right">
           <span class="tori bg-white m-0 p-1">🐥</span>
