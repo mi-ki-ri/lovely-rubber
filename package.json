@@ -1,7 +1,7 @@
 {
-  "name": "rubberapp",
+  "name": "LovelyRubber",
   "version": "1.0.0",
-  "description": "My classy Nuxt.js project",
+  "description": "My Rubberducking App",
   "author": "hotta",
   "private": true,
   "scripts": {
