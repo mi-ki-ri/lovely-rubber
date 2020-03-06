@@ -1,22 +1,27 @@
-# rubberapp
+# LovelyRubber
 
-> My classy Nuxt.js project
+> My Rubberducking App
 
-## Build Setup
+[https://mi-ki-ri.github.io/lovely-rubber/](https://mi-ki-ri.github.io/lovely-rubber/)
 
-``` bash
-# install dependencies
-$ yarn install
+## RubberDucking?
 
-# serve with hot reload at localhost:3000
-$ yarn dev
+ゴム製のアヒルの人形と会話することで頭の中を整理するテクニックです。
 
-# build for production and launch server
-$ yarn build
-$ yarn start
+それをWebアプリにしたものがLovelyRubberになります。
 
-# generate static project
-$ yarn generate
-```
+## How To Use
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+![ScreenShot](lovelyrubberscreenshot.png)
+
+画面上部のテキストエリアに話したいことを入れ、Submitボタンで送信します。
+
+AIが **適当** に返事をしてくれるので、さらに会話を続けます。
+
+## Special Thanks
+
+- [COTOHA API](https://api.ce-cotoha.com/contents/index.html)
+    - キーワード抽出に使用
+- Nuxt.js
+- Bootstrap Vue
+- axios

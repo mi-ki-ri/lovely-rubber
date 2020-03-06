@@ -6,7 +6,9 @@
           <h1 class="brand d-flex align-items-center">Lovely Rubber</h1>
         </b-col>
         <b-col class="text-right">
-          <span class="tori bg-white m-0 p-1">🐥</span>
+          <a href="https://github.com/mi-ki-ri/lovely-rubber">
+            <span class="tori bg-white m-0 p-1">🐥</span>
+          </a>
         </b-col>
       </b-row>
     </b-container>
@@ -15,7 +17,9 @@
       <b-row>
         <b-col cols="10"> <b-textarea v-model="msg" class="textarea" /> </b-col
         ><b-col>
-          <b-button variant="info" class="submit" @click="test">送信</b-button>
+          <b-button variant="info" class="submit" @click="test"
+            >Submit</b-button
+          >
         </b-col>
       </b-row>
     </b-container>
