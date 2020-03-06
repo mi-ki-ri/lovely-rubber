@@ -196,7 +196,8 @@ export default {
 }
 .footer {
   border-bottom: 1px solid var(--gray);
-  padding-bottom: 5px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 .textarea {
   width: 100%;
