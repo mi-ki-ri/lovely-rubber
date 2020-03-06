@@ -42,8 +42,8 @@ export default {
       responses: [],
       api: "https://us-central1-rubber-app.cloudfunctions.net/rubber",
       gobis: [
-        "",
-        "",
+        "。",
+        "。",
         "？",
         "！",
         "だね。",
