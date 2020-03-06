@@ -1,7 +1,7 @@
 <template>
   <b-container fluid class="p-0">
     <b-container fluid tag="header" class="header m-0 p-0">
-      <b-row class="m-0 p-0">
+      <b-row class="m-0 p-0 d-flex align-items-center">
         <b-col class="m-0 p-1">
           <h1 class="brand">Lovely Rubber</h1>
         </b-col>
@@ -10,22 +10,23 @@
         </b-col>
       </b-row>
     </b-container>
-    <b-container tag="main" class="main">
-      <b-row :key="index" v-for="(response, index) of responses">
-        <b-col class="msg m-2 mb-4">
-          {{ response.msg }}
-        </b-col>
-        <b-col class="response m-2 mb-4">
-          {{ response.response }}
-        </b-col>
-      </b-row>
-    </b-container>
+
     <b-container tag="footer" class="footer">
       <b-row>
         <b-col cols="10">
           <b-textarea v-model="msg" /> </b-col
         ><b-col>
           <b-button variant="info" class="submit" @click="test">送信</b-button>
+        </b-col>
+      </b-row>
+    </b-container>
+        <b-container tag="main" class="main">
+      <b-row :key="index" v-for="(response, index) of responses">
+        <b-col class="msg m-2 mb-4">
+          {{ response.msg }}
+        </b-col>
+        <b-col class="response m-2 mb-4">
+          {{ response.response }}
         </b-col>
       </b-row>
     </b-container>
@@ -195,8 +196,8 @@ export default {
   color: white;
 }
 .footer {
-  border-top: 1px solid var(--gray);
-  padding-top: 5px;
+  border-bottom: 1px solid var(--gray);
+  padding-bottom: 5px;
 }
 .submit {
   margin-left: auto;
