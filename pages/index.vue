@@ -5,7 +5,7 @@
         <b-col class="m-0 p-1 d-flex align-items-center">
           <h1 class="brand d-flex align-items-center">Lovely Rubber</h1>
         </b-col>
-        <b-col class="text-right d-flex align-items-center">
+        <b-col class="text-right">
           <span class="tori bg-white m-0 p-1">🐥</span>
         </b-col>
       </b-row>
